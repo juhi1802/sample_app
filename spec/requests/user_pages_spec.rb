@@ -28,9 +28,6 @@ describe "User pages" do
 
     describe "with valid information" do
       before do
-      
-        puts page.html
-        puts "*"*100
         fill_in "Name",         with: "Example"
         fill_in "Email",        with: "user@example.com"
         fill_in "Password",     with: "foobar"
@@ -38,8 +35,6 @@ describe "User pages" do
       end
 
       it "should create a user" do
-        puts page.html
-        puts "#"*100
         expect { click_button submit }.to change(User, :count).by(1)
       end
     end
